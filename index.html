@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Scripta | Research-backed ebooks for creators</title>
+<meta name="description" content="Casa Scripta turns your audience's questions into short, well-researched ebooks. Writing, design, checkout and delivery handled.">
+<meta property="og:title" content="Casa Scripta">
+<meta property="og:description" content="Research-backed ebooks for creators' audiences.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casascripta.com">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1A1C1B;--paper:#F4F0E8;--green:#1F3D33;--brass:#A8834A;--stone:#6B6A64;--line:#DDD5C6}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.1}
+.cinzel{font-family:Cinzel,Georgia,serif;letter-spacing:.18em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.seal{width:38px;height:38px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--green),inset 0 0 0 4px var(--brass);color:var(--paper);font-family:Cinzel,serif;font-size:13px;letter-spacing:.05em}
+.brand b{font-family:Cinzel,serif;font-weight:600;font-size:15px;letter-spacing:.2em}
+nav .links a{color:var(--stone);text-decoration:none;font-size:14px;margin-left:26px;letter-spacing:.04em}
+nav .links a:hover{color:var(--green)}
+.hero{padding:110px 0 120px;text-align:center}
+.heroseal{display:block;margin:0 auto 34px}.hero .mark{width:96px;height:96px;margin:0 auto 34px;font-size:30px}
+.hero h1{font-family:Cinzel,serif;font-weight:500;font-size:clamp(40px,7.5vw,78px);letter-spacing:.14em;line-height:1.05}
+.hero .year{font-family:Cinzel,serif;color:var(--brass);letter-spacing:.5em;font-size:13px;margin-top:16px}
+.rule{width:64px;height:1px;background:var(--brass);margin:30px auto}
+.hero p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(22px,2.8vw,27px);color:var(--stone);margin-bottom:40px}
+.btn{display:inline-block;background:var(--green);color:var(--paper);padding:15px 30px;border-radius:2px;text-decoration:none;font-family:Cinzel,serif;font-size:13px;letter-spacing:.2em;transition:background .2s}
+.btn:hover{background:#163027}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.label{font-family:Cinzel,serif;font-size:12px;letter-spacing:.3em;color:var(--brass);margin-bottom:16px}
+.label:before{content:"";display:inline-block;width:28px;height:1px;background:var(--brass);vertical-align:middle;margin-right:12px}
+section h2{font-size:clamp(34px,4.6vw,48px);margin-bottom:24px}
+.lead{max-width:660px;font-size:19px;color:#2c2e2d}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:56px}
+.step .n{font-family:Cinzel,serif;color:var(--brass);font-size:22px;letter-spacing:.1em}
+.step h3{font-size:25px;margin:8px 0 8px}
+.step p{color:var(--stone);font-size:15.5px}
+.samples{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:12px}
+.sample{display:flex;gap:24px;align-items:center;background:#FBF8F2;border:1px solid var(--line);padding:26px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.sample:hover{border-color:var(--brass);transform:translateY(-2px)}
+.cover{flex:none;width:96px;height:132px;background:var(--green);color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 8px;box-shadow:inset 0 0 0 5px var(--green),inset 0 0 0 6px var(--brass),6px 8px 18px rgba(0,0,0,.18);font-family:Cinzel,serif;text-align:center}
+.cover.alt{background:#2A2622;box-shadow:inset 0 0 0 5px #2A2622,inset 0 0 0 6px var(--brass),6px 8px 18px rgba(0,0,0,.18)}
+.cover i{font-style:normal;font-size:8px;letter-spacing:.25em;color:var(--brass)}
+.cover b{font-weight:500;font-size:11px;letter-spacing:.12em;line-height:1.4}
+.sample h3{font-size:24px}
+.sample p{color:var(--stone);font-size:15px;margin:4px 0 12px}
+.sample span{font-family:Cinzel,serif;font-size:11px;letter-spacing:.2em;color:var(--green)}
+.about{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:center}
+.about img{width:240px;height:240px;border-radius:50%;object-fit:cover;display:block;box-shadow:0 0 0 6px var(--paper),0 0 0 7px var(--brass)}
+.about p{color:#2c2e2d}
+.contact{text-align:center}
+.contact .label:before{display:none}
+.contact p{color:var(--stone);margin:-6px 0 34px}
+footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--stone);font-size:13px}
+footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
+@media(max-width:720px){nav .links{display:none}.hero{padding:70px 0 80px}section{padding:68px 0}.steps{grid-template-columns:1fr;gap:28px;margin-top:36px}.about{grid-template-columns:1fr;gap:30px;text-align:center}.about img{margin:0 auto;width:190px;height:190px}.label:before{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="brand" href="#"><span class="seal">CS</span><b>CASA SCRIPTA</b></a><div class="links"><a href="#what">What I do</a><a href="#samples">Samples</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+<svg class="heroseal" width="170" height="170" role="img" aria-label="Casa Scripta seal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" letter-spacing="0">
+<defs><g id="leaf"><ellipse cx="0" cy="-6" rx="3" ry="7" fill="#A8834A"/></g>
+<g id="laurel"><path d="M100,166 A66,66 0 0 1 42,72" fill="none" stroke="#A8834A" stroke-width="1"/>
+<use href="#leaf" transform="rotate(200 100 100) translate(100 34) rotate(-60)"/><use href="#leaf" transform="rotate(214 100 100) translate(100 34) rotate(-60)"/><use href="#leaf" transform="rotate(228 100 100) translate(100 34) rotate(-60)"/><use href="#leaf" transform="rotate(242 100 100) translate(100 34) rotate(-60)"/><use href="#leaf" transform="rotate(256 100 100) translate(100 34) rotate(-60)"/><use href="#leaf" transform="rotate(270 100 100) translate(100 34) rotate(-60)"/><use href="#leaf" transform="rotate(284 100 100) translate(100 34) rotate(-60)"/></g></defs>
+<circle cx="100" cy="100" r="97" fill="#1F3D33"/>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#A8834A" stroke-width="1.4"/>
+<circle cx="100" cy="100" r="87" fill="none" stroke="#A8834A" stroke-width=".7" stroke-dasharray="1 3"/>
+<use href="#laurel"/><use href="#laurel" transform="translate(200 0) scale(-1 1)"/>
+<text x="100" y="110" text-anchor="middle" font-family="Cinzel" font-size="58" font-weight="500" fill="#F4F0E8">CS</text>
+<line x1="78" y1="119" x2="122" y2="119" stroke="#A8834A" stroke-width=".7"/>
+<text x="100" y="132" text-anchor="middle" font-family="Cinzel" font-size="8" letter-spacing="2.6" fill="#F4F0E8">CASA SCRIPTA</text>
+<text x="100" y="148" text-anchor="middle" font-family="Cinzel" font-size="7" letter-spacing="3" fill="#A8834A">MMXXVI</text>
+</svg>
+
+<h1>CASA SCRIPTA</h1>
+<div class="year">MMXXVI</div>
+<div class="rule"></div>
+<p>Research-backed ebooks for creators' audiences.</p>
+<a class="btn" href="#contact">WORK WITH ME</a>
+</header>
+<section id="what">
+<div class="label">WHAT I DO</div>
+<h2>Your audience's questions, turned into a product.</h2>
+<p class="lead">You have the audience and the trust. I turn the questions your followers keep asking into a short, well-researched ebook, with the writing, design, checkout and delivery all handled. You share it, and we split the sales.</p>
+<div class="steps">
+<div class="step"><div class="n">I</div><h3>You share</h3><p>Tell me what your followers keep asking. That becomes the topic.</p></div>
+<div class="step"><div class="n">II</div><h3>I build</h3><p>Research, writing, design, checkout and delivery, all done for you.</p></div>
+<div class="step"><div class="n">III</div><h3>We split</h3><p>You share it with your audience, and we split every sale.</p></div>
+</div>
+</section>
+<section id="samples">
+<div class="label">SAMPLES</div>
+<h2>See the work.</h2>
+<div class="samples">
+<a class="sample" href="https://drive.google.com/file/d/1w79qVJgdvHlpmF1g7zsPDLF4gwMdOTAI/view?usp=drivesdk" target="_blank" rel="noopener"><div class="cover"><i>CASA SCRIPTA</i><b>FOR DOG<br>OWNERS</b><i>EBOOK</i></div><div><h3>Dog owner ebook</h3><p>A full sample ebook written for dog owners.</p><span>OPEN SAMPLE →</span></div></a>
+<a class="sample" href="https://drive.google.com/file/d/1iszznDqLCAPAn7RuD0_Gyy9o_0hae_DA/view?usp=drivesdk" target="_blank" rel="noopener"><div class="cover alt"><i>CASA SCRIPTA</i><b>JOB<br>SEARCH</b><i>OUTLINE</i></div><div><h3>Job-search ebook</h3><p>Outline of an ebook for people looking for work.</p><span>OPEN SAMPLE →</span></div></a>
+</div>
+</section>
+<section id="about">
+<div class="about">
+<picture><source srcset="images/devid.webp" type="image/webp"><img src="images/devid.jpg" alt="Portrait of Devid Egli" width="240" height="240" loading="lazy"></picture>
+<div><div class="label">ABOUT ME</div><h2>Hi, I'm Devid.</h2>
+<p>I'm Devid Egli. Casa Scripta is my newest project, and one I really care about. Over the years I've led teams, built sales from scratch and run departments in several countries, and the lesson that stuck is that good work comes from doing the details properly. That's how I make every ebook: real research, clear writing, and a finished product your audience will actually use.</p></div>
+</div>
+</section>
+<section id="contact" class="contact">
+<div class="label">CONTACT</div>
+<h2>Let's build something for your audience.</h2>
+<p>Reply to my email or write to me directly.</p>
+<a class="btn" href="mailto:devid@casascripta.com">DEVID@CASASCRIPTA.COM</a>
+</section>
+</div>
+<footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta</footer>
+</body>
+</html>
