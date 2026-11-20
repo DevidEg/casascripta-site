@@ -49,6 +49,7 @@ section h2{font-size:clamp(34px,4.6vw,48px);margin-bottom:24px}
 .sample:hover{border-color:var(--brass);transform:translateY(-2px)}
 .cover{flex:none;width:96px;height:132px;background:var(--green);color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 8px;box-shadow:inset 0 0 0 5px var(--green),inset 0 0 0 6px var(--brass),6px 8px 18px rgba(0,0,0,.18);font-family:Cinzel,serif;text-align:center}
 .cover.alt{background:#2A2622;box-shadow:inset 0 0 0 5px #2A2622,inset 0 0 0 6px var(--brass),6px 8px 18px rgba(0,0,0,.18)}
+.coverimg{flex:none;width:96px;height:144px;object-fit:cover;display:block;box-shadow:6px 8px 18px rgba(0,0,0,.18)}
 .cover i{font-style:normal;font-size:8px;letter-spacing:.25em;color:var(--brass)}
 .cover b{font-weight:500;font-size:11px;letter-spacing:.12em;line-height:1.4}
 .sample h3{font-size:24px}
@@ -63,12 +64,12 @@ section h2{font-size:clamp(34px,4.6vw,48px);margin-bottom:24px}
 .contact p{color:var(--stone);margin:-6px 0 34px}
 footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--stone);font-size:13px}
 footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
-@media(max-width:720px){nav .links{display:none}.hero{padding:70px 0 80px}section{padding:68px 0}.steps{grid-template-columns:1fr;gap:28px;margin-top:36px}.about{grid-template-columns:1fr;gap:30px;text-align:center}.about img{margin:0 auto;width:190px;height:190px}.label:before{display:none}}
+@media(max-width:720px){nav{flex-wrap:wrap;gap:12px}nav .links{display:flex;flex-wrap:wrap;gap:8px 0}nav .links a{margin-left:0;margin-right:18px}.hero{padding:70px 0 80px}section{padding:68px 0}.steps{grid-template-columns:1fr;gap:28px;margin-top:36px}.about{grid-template-columns:1fr;gap:30px;text-align:center}.about img{margin:0 auto;width:190px;height:190px}.label:before{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="#"><span class="seal">CS</span><b>CASA SCRIPTA</b></a><div class="links"><a href="#what">What I do</a><a href="#samples">Samples</a><a href="/printables/">Printables</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<nav><a class="brand" href="/"><span class="seal">CS</span><b>CASA SCRIPTA</b></a><div class="links"><a href="/for-creators/">For creators</a><a href="/printables/">Printables</a><a href="/blog/">Blog</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
 <header class="hero">
 <svg class="heroseal" width="170" height="170" role="img" aria-label="Casa Scripta seal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" letter-spacing="0">
 <defs><g id="leaf"><ellipse cx="0" cy="-6" rx="3" ry="7" fill="#A8834A"/></g>
@@ -88,25 +89,32 @@ footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
 <div class="year">MMXXVI</div>
 <div class="rule"></div>
 <p>Research-backed ebooks for creators' audiences.</p>
-<a class="btn" href="#contact">WORK WITH ME</a>
+<a class="btn" href="/for-creators/">FOR CREATORS</a>
 </header>
 <section id="what">
 <div class="label">WHAT I DO</div>
 <h2>Your audience's questions, turned into a product.</h2>
-<p class="lead">You have the audience and the trust. I turn the questions your followers keep asking into a short, well-researched ebook, with the writing, design, checkout and delivery all handled. You share it, and we split the sales.</p>
+<p class="lead">You have the audience and the trust. I turn the questions your followers keep asking into a short, well-researched ebook, with the writing, design, checkout and delivery all handled. You share it, and we split every sale 60/40 in your favour.</p>
 <div class="steps">
 <div class="step"><div class="n">I</div><h3>You share</h3><p>Tell me what your followers keep asking. That becomes the topic.</p></div>
 <div class="step"><div class="n">II</div><h3>I build</h3><p>Research, writing, design, checkout and delivery, all done for you.</p></div>
-<div class="step"><div class="n">III</div><h3>We split</h3><p>You share it with your audience, and we split every sale.</p></div>
+<div class="step"><div class="n">III</div><h3>We split</h3><p>You share it with your audience, and we split every sale 60/40: you get 60 percent, Casa Scripta 40.</p></div>
 </div>
 </section>
 <section id="samples">
 <div class="label">SAMPLES</div>
 <h2>See the work.</h2>
 <div class="samples">
-<a class="sample" href="https://drive.google.com/file/d/1w79qVJgdvHlpmF1g7zsPDLF4gwMdOTAI/view?usp=drivesdk" target="_blank" rel="noopener"><div class="cover"><i>CASA SCRIPTA</i><b>FOR DOG<br>OWNERS</b><i>EBOOK</i></div><div><h3>Dog owner ebook</h3><p>A full sample ebook written for dog owners.</p><span>OPEN SAMPLE →</span></div></a>
-<a class="sample" href="https://drive.google.com/file/d/1iszznDqLCAPAn7RuD0_Gyy9o_0hae_DA/view?usp=drivesdk" target="_blank" rel="noopener"><div class="cover alt"><i>CASA SCRIPTA</i><b>JOB<br>SEARCH</b><i>OUTLINE</i></div><div><h3>Job-search ebook</h3><p>Outline of an ebook for people looking for work.</p><span>OPEN SAMPLE →</span></div></a>
+<a class="sample" href="https://devideg.gumroad.com/l/qcxxca" target="_blank" rel="noopener"><img class="coverimg" src="/images/books/alone-at-home.webp" alt="Cover of Alone at Home: Dog Edition" width="96" height="144"><div><h3>Alone at Home</h3><p>A gentle, force-free plan for apartment dogs who can't be left alone. $15.</p><span>SEE THE BOOK →</span></div></a>
+<a class="sample" href="https://devideg.gumroad.com/l/mhvsc" target="_blank" rel="noopener"><img class="coverimg" src="/images/books/gentler-nights.webp" alt="Cover of Gentler Nights" width="96" height="144"><div><h3>Gentler Nights</h3><p>A calm 14-night baby sleep plan after the 4-month regression, with no cry-it-out. $17.</p><span>SEE THE BOOK →</span></div></a>
 </div>
+<p class="lead" style="margin-top:28px">Creators: the partnership terms, including the 60/40 split and how payouts work, are on the <a href="/for-creators/" style="color:var(--green);text-decoration-color:var(--brass);text-underline-offset:3px">for creators</a> page.</p>
+</section>
+<section id="free">
+<div class="label">FREE PRINTABLES</div>
+<h2>Start with a free checklist.</h2>
+<p class="lead">A one-page Safe Sleep Checklist for babies, and a Vet-First Red Flags checklist for dog owners. Both are free to download, in A4 and US Letter, with no signup.</p>
+<p style="margin-top:28px"><a class="btn" href="/free/">FREE PRINTABLES</a></p>
 </section>
 <section id="about">
 <div class="about">
@@ -124,6 +132,6 @@ footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
 <a class="btn" href="mailto:devid@casascripta.com">DEVID@CASASCRIPTA.COM</a>
 </section>
 </div>
-<footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/printables/" style="color:inherit">Printables</a> · <a href="/blog/" style="color:inherit">Blog</a></footer>
+<footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/for-creators/" style="color:inherit">For creators</a> · <a href="/printables/" style="color:inherit">Printables</a> · <a href="/free/" style="color:inherit">Free printables</a> · <a href="/blog/" style="color:inherit">Blog</a></footer>
 </body>
 </html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For creators | Casa Scripta</title>
+<meta name="description" content="How a Casa Scripta partnership works: a 60/40 split in your favour, no cost to you, you approve the final book, and Gumroad handles checkout and payouts.">
+<meta property="og:title" content="For creators | Casa Scripta">
+<meta property="og:description" content="How a Casa Scripta partnership works: a 60/40 split in your favour, no cost to you, and you approve the final book.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casascripta.com/for-creators/">
+<link rel="canonical" href="https://casascripta.com/for-creators/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1A1C1B;--paper:#F4F0E8;--green:#1F3D33;--brass:#A8834A;--stone:#6B6A64;--line:#DDD5C6;--card:#FBF8F2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+.cinzel{font-family:Cinzel,Georgia,serif;letter-spacing:.18em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.seal{width:36px;height:36px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--green),inset 0 0 0 4px var(--brass);color:var(--paper);font-family:Cinzel,serif;font-size:12px}
+.brand b{font-family:Cinzel,serif;font-weight:600;font-size:14px;letter-spacing:.2em}
+nav .links a{color:var(--stone);text-decoration:none;font-size:14px;margin-left:24px;letter-spacing:.04em}
+nav .links a:hover,nav .links a[aria-current="page"]{color:var(--green)}
+.label{font-family:Cinzel,serif;font-size:12px;letter-spacing:.3em;color:var(--brass);margin-bottom:16px}
+.label:before{content:"";display:inline-block;width:28px;height:1px;background:var(--brass);vertical-align:middle;margin-right:12px}
+.intro{padding:64px 0 24px}
+.intro h1{font-size:clamp(38px,5.5vw,56px);margin-bottom:20px}
+.lead{max-width:660px;font-size:19px;color:#2c2e2d}
+.intro .note{max-width:660px;color:var(--stone);font-size:15.5px;margin-top:16px}
+.btn{display:inline-block;background:#5A1A1E;color:var(--paper);padding:15px 30px;border-radius:2px;text-decoration:none;font-family:Cinzel,serif;font-size:13px;letter-spacing:.2em;transition:background .2s;box-shadow:inset 0 0 0 1px #A8834A, inset 0 0 0 4px #5A1A1E, inset 0 0 0 5px rgba(168,131,74,.6);margin-top:28px}
+.btn:hover{background:#461215}
+section{padding:72px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(32px,4.2vw,44px);margin-bottom:24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:40px}
+.step .n{font-family:Cinzel,serif;color:var(--brass);font-size:22px;letter-spacing:.1em}
+.step h3{font-size:25px;margin:8px 0 8px}
+.step p{color:var(--stone);font-size:15.5px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:12px}
+.term{background:var(--card);border:1px solid var(--line);padding:24px 26px}
+.term h3{font-size:24px;margin-bottom:8px}
+.term p{color:#2c2e2d;font-size:15.5px}
+.books{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:12px}
+.book{display:flex;gap:22px;align-items:center;background:var(--card);border:1px solid var(--line);padding:22px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.book:hover{border-color:var(--brass);transform:translateY(-2px)}
+.book img{flex:none;width:110px;height:165px;object-fit:cover;display:block;box-shadow:6px 8px 18px rgba(0,0,0,.18)}
+.book h3{font-size:24px}
+.book p{color:var(--stone);font-size:15px;margin:4px 0 12px}
+.book .meta{font-family:Cinzel,serif;font-size:11px;letter-spacing:.18em;color:var(--green)}
+.faq p{margin-bottom:16px;max-width:720px}
+.faq p strong{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;font-weight:600;margin-bottom:4px;color:var(--ink)}
+.contact{text-align:center}
+.contact .label:before{display:none}
+.contact p{color:var(--stone);margin:-6px 0 8px}
+.contact .btn{margin-top:20px}
+.fine{padding:0 0 80px;color:var(--stone);font-size:14px;max-width:720px}
+.fine a{color:var(--green)}
+footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--stone);font-size:13px}
+footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px;font-family:Cinzel,serif;letter-spacing:.18em}
+footer a{color:var(--stone)}
+@media(max-width:720px){
+  nav{flex-wrap:wrap;gap:12px}
+  nav .links{display:flex;flex-wrap:wrap;gap:8px 0}
+  nav .links a{margin-left:0;margin-right:18px}
+  .intro{padding:48px 0 12px}
+  section{padding:56px 0}
+  .label:before{display:none}
+  .steps,.terms,.books{grid-template-columns:1fr;gap:22px}
+  .book{align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="brand" href="/"><div class="seal">CS</div><b>CASA SCRIPTA</b></a><div class="links"><a href="/">Home</a><a href="/for-creators/" aria-current="page">For creators</a><a href="/printables/">Printables</a><a href="/blog/">Blog</a></div></nav>
+
+<header class="intro">
+<div class="label">FOR CREATORS</div>
+<h1>A finished book, for your audience.</h1>
+<p class="lead">You have the audience and the trust. I research, write and design a short ebook for the questions they already ask, then handle checkout and delivery. You share it if you want to. We split every sale 60/40 in your favour. There is no cost to you, and you approve the final version before it goes out.</p>
+<p class="note">Two books are already finished and for sale. New partnerships start with one of these, not with a promise of a book that does not exist yet.</p>
+<a class="btn" href="mailto:devid@casascripta.com">DEVID@CASASCRIPTA.COM</a>
+</header>
+
+<section id="how">
+<div class="label">HOW IT WORKS</div>
+<h2>Three steps, and you stay in control.</h2>
+<div class="steps">
+<div class="step"><div class="n">I</div><h3>You look</h3><p>Read the terms on this page and open the finished book that fits your audience. If it is not a fit, you can say no.</p></div>
+<div class="step"><div class="n">II</div><h3>You approve</h3><p>We agree any changes, and the book does not launch under your name until you approve the final version in writing. An email counts.</p></div>
+<div class="step"><div class="n">III</div><h3>You share, we split</h3><p>Gumroad handles checkout and delivery. You share the book with your audience as often as you choose. You get 60 percent of net sales.</p></div>
+</div>
+</section>
+
+<section id="terms">
+<div class="label">THE TERMS</div>
+<h2>The terms, in plain English.</h2>
+<div class="terms">
+<article class="term">
+<h3>The split</h3>
+<p>Every sale is split 60/40 in your favour: you receive 60 percent of net sales, Casa Scripta 40 percent. Net sales means what the customer paid, minus sales tax, Gumroad's fees and refunds.</p>
+</article>
+<article class="term">
+<h3>No cost to you</h3>
+<p>You do not pay a setup fee, a monthly fee, or a fee for the writing or design. If the book does not sell, you owe nothing.</p>
+</article>
+<article class="term">
+<h3>You approve the final version</h3>
+<p>The ebook will not go out under your name until you have approved the final version in writing. An email counts as writing.</p>
+</article>
+<article class="term">
+<h3>Checkout and delivery</h3>
+<p>The book is sold on Gumroad, which acts as merchant of record, collects sales tax where it must, and delivers the file to the buyer.</p>
+</article>
+<article class="term">
+<h3>How you are paid</h3>
+<p>You need your own Gumroad account, with payment settings filled in. Gumroad can pay a collaborator automatically, up to a maximum cut of 50 percent. We set that cut at 50 percent, so half of each sale goes straight into your Gumroad balance and is paid out on the schedule you choose there. Casa Scripta does not handle that money. The remaining 10 percent, which brings your share to 60, is paid to you by Casa Scripta with a sales report by the 15th of the following month, covering the previous calendar month.</p>
+</article>
+<article class="term">
+<h3>You can leave</h3>
+<p>Either side can end the partnership by giving 30 days' written notice. An email counts. Your audience stays yours. When it ends, your name comes off the book and Casa Scripta stops using it to sell. You keep your share of every sale made before the end date.</p>
+</article>
+</div>
+</section>
+
+<section id="books">
+<div class="label">THE BOOKS</div>
+<h2>The two finished books.</h2>
+<div class="books">
+<a class="book" href="https://devideg.gumroad.com/l/qcxxca" target="_blank" rel="noopener">
+<img src="/images/books/alone-at-home.webp" alt="Cover of Alone at Home: Dog Edition" width="110" height="165">
+<div>
+<h3>Alone at Home</h3>
+<p>A gentle, force-free plan for apartment dogs who can't be left alone, with a week-one cover plan and a 4-week foundation. $15.</p>
+<div class="meta">SEE THE BOOK →</div>
+</div>
+</a>
+<a class="book" href="https://devideg.gumroad.com/l/mhvsc" target="_blank" rel="noopener">
+<img src="/images/books/gentler-nights.webp" alt="Cover of Gentler Nights" width="110" height="165">
+<div>
+<h3>Gentler Nights</h3>
+<p>A calm 14-night baby sleep plan after the 4-month regression, with no cry-it-out, and safe-sleep guidance first. $17.</p>
+<div class="meta">SEE THE BOOK →</div>
+</div>
+</a>
+</div>
+</section>
+
+<section id="faq" class="faq">
+<div class="label">FAQ</div>
+<h2>Common questions.</h2>
+<p><strong>Is this exclusive?</strong>
+No. You can promote other products, and Casa Scripta can work with other creators and sell other ebooks.</p>
+<p><strong>Who owns the book?</strong>
+Casa Scripta owns the ebook, including its text and design. While we work together you have a licence to promote it, including the cover, excerpts and sales links. That licence ends when the partnership ends.</p>
+<p><strong>Do I have to post a certain amount?</strong>
+No. You promote the book in whatever way, and as often, as you choose.</p>
+<p><strong>What if a sale is refunded?</strong>
+Refunds come out of net sales. Where Gumroad keeps a processing fee on a refund, that fee comes out of Casa Scripta's share only.</p>
+<p><strong>Do you promise a certain income?</strong>
+No. Sales depend on whether your audience wants the book. There is no minimum and no guarantee.</p>
+</section>
+
+<section id="contact" class="contact">
+<div class="label">CONTACT</div>
+<h2>If this sounds like a fit, write to me.</h2>
+<p>I read every email myself.</p>
+<a class="btn" href="mailto:devid@casascripta.com">DEVID@CASASCRIPTA.COM</a>
+</section>
+
+<p class="fine">These are the current partnership terms, written in plain English. They are not a signed contract and are not legal advice. A written agreement is sent before a book goes out under your name. Questions: <a href="mailto:devid@casascripta.com">devid@casascripta.com</a>.</p>
+</div>
+<footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/for-creators/">For creators</a> · <a href="/printables/">Printables</a> · <a href="/free/">Free printables</a> · <a href="/blog/">Blog</a></footer>
+</body>
+</html>
