@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printables | Casa Scripta</title>
+<meta name="description" content="Printable planners, trackers and checklists from Casa Scripta, in A4 and US Letter.">
+<meta property="og:title" content="Printables | Casa Scripta">
+<meta property="og:description" content="Printable planners, trackers and checklists from Casa Scripta, in A4 and US Letter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casascripta.com/printables/">
+<link rel="canonical" href="https://casascripta.com/printables/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1A1C1B;--paper:#F4F0E8;--green:#1F3D33;--brass:#A8834A;--stone:#6B6A64;--line:#DDD5C6;--card:#FBF8F2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+.cinzel{font-family:Cinzel,Georgia,serif;letter-spacing:.18em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.seal{width:36px;height:36px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--green),inset 0 0 0 4px var(--brass);color:var(--paper);font-family:Cinzel,serif;font-size:12px}
+.brand b{font-family:Cinzel,serif;font-weight:600;font-size:14px;letter-spacing:.2em}
+nav .links a{color:var(--stone);text-decoration:none;font-size:14px;margin-left:24px;letter-spacing:.04em}
+nav .links a:hover,nav .links a[aria-current="page"]{color:var(--green)}
+.label{font-family:Cinzel,serif;font-size:12px;letter-spacing:.3em;color:var(--brass);margin-bottom:16px}
+.label:before{content:"";display:inline-block;width:28px;height:1px;background:var(--brass);vertical-align:middle;margin-right:12px}
+.intro{padding:64px 0 24px}
+.intro h1{font-size:clamp(38px,5.5vw,56px);margin-bottom:20px}
+.lead{max-width:660px;font-size:19px;color:#2c2e2d}
+.intro .note{max-width:660px;color:var(--stone);font-size:15.5px;margin-top:16px}
+.intro .note a{color:var(--green);text-decoration-color:var(--brass);text-underline-offset:3px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(32px,4.2vw,44px);margin-bottom:32px}
+.btn{display:inline-block;background:#5A1A1E;color:var(--paper);padding:15px 30px;border-radius:2px;text-decoration:none;font-family:Cinzel,serif;font-size:13px;letter-spacing:.2em;transition:background .2s;box-shadow:inset 0 0 0 1px #A8834A, inset 0 0 0 4px #5A1A1E, inset 0 0 0 5px rgba(168,131,74,.6)}
+.btn:hover{background:#461215}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--brass);transform:translateY(-2px)}
+.card img{width:100%;height:auto;display:block;background:#EFE8DA}
+.card .body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:26px;margin-bottom:8px}
+.meta{font-family:Cinzel,serif;font-size:11px;letter-spacing:.18em;color:var(--green);margin-bottom:10px}
+.price{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:28px;color:var(--ink);margin-bottom:8px}
+.card p{color:var(--stone);font-size:15.5px;margin-bottom:18px;flex:1}
+.card .btn{align-self:flex-start;padding:13px 22px;font-size:12px}
+.card.featured{grid-column:1 / -1;display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch}
+.card.featured .body{padding:28px 32px;justify-content:center}
+.fine{padding:0 0 80px;color:var(--stone);font-size:14px;max-width:700px}
+footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--stone);font-size:13px}
+footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px;font-family:Cinzel,serif;letter-spacing:.18em}
+footer a{color:var(--stone)}
+.card.featured{grid-template-columns:1fr 1fr}
+@media(max-width:720px){
+  nav{flex-wrap:wrap;gap:12px}
+  nav .links{display:flex;flex-wrap:wrap;gap:8px 0}
+  nav .links a{margin-left:0;margin-right:18px}
+  .intro{padding:48px 0 12px}
+  section{padding:56px 0}
+  .label:before{display:none}
+  .grid{grid-template-columns:1fr;gap:22px}
+  .card.featured{grid-template-columns:1fr}
+  .card.featured .body{padding:22px 24px 26px}
+  .card .btn{width:100%;text-align:center}
+  section h2 .rest{display:block}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="brand" href="/"><div class="seal">CS</div><b>CASA SCRIPTA</b></a><div class="links"><a href="/">Home</a><a href="/printables/" aria-current="page">Printables</a><a href="/blog/">Blog</a></div></nav>
+
+<header class="intro">
+<div class="label">PRINTABLES</div>
+<h1>Printables</h1>
+<p class="lead">Printable planners, trackers and checklists drawn from our books, to fill in by hand. Each file comes in A4 and US Letter.</p>
+<p class="note">The full ebooks these pages are drawn from are on the <a href="/">homepage</a> and on Gumroad.</p>
+</header>
+
+<section id="gentler-nights">
+<div class="label">GENTLER NIGHTS</div>
+<h2>Gentler Nights · <span class="rest">Baby Sleep</span></h2>
+<div class="grid">
+<article class="card" id="gumroad-gn-14-night-gentle-sleep-tracker">
+<img src="/images/printables/gn-14-night-gentle-sleep-tracker.webp" alt="Cover of the 14-Night Gentle Sleep Tracker, with a preview of the first page" width="1000" height="750">
+<div class="body">
+<h3>14-Night Gentle Sleep&nbsp;Tracker</h3>
+<div class="meta">10 pages · A4 &amp; US Letter</div>
+<div class="price">$5.50</div>
+<p>Track 14 calm nights, then see what changed.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/qmdnpi" data-slug="gn-14-night-gentle-sleep-tracker">BUY ON GUMROAD</a>
+</div>
+</article>
+<article class="card" id="gumroad-gn-3-day-sleep-diary-partner-plan">
+<img src="/images/printables/gn-3-day-sleep-diary-partner-plan.webp" alt="Cover of the 3-Day Sleep Diary and Partner Plan, with a preview of the diary page" width="1000" height="750">
+<div class="body">
+<h3>3-Day Sleep Diary &amp; Partner&nbsp;Plan</h3>
+<div class="meta">6 pages · A4 &amp; US Letter</div>
+<div class="price">$4.50</div>
+<p>A clear before picture, and a plan you both agree on.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/uyobihe" data-slug="gn-3-day-sleep-diary-partner-plan">BUY ON GUMROAD</a>
+</div>
+</article>
+<article class="card" id="gumroad-gn-safe-sleep-checklist">
+<img src="/images/printables/gn-safe-sleep-checklist.webp" alt="Cover of the Safe Sleep Checklist, with a preview of the one-page checklist" width="1000" height="750">
+<div class="body">
+<h3>Safe Sleep Checklist</h3>
+<div class="meta">1 page · A4 &amp; US Letter</div>
+<div class="price">$2.50</div>
+<p>Every sleep, day and night, until age 1.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/cvqen" data-slug="gn-safe-sleep-checklist">BUY ON GUMROAD</a>
+</div>
+</article>
+<article class="card" id="gumroad-gn-printable-sleep-kit">
+<img src="/images/printables/gn-printable-sleep-kit.webp" alt="Cover of the Gentler Nights Printable Sleep Kit, with a preview of the kit contents page" width="1000" height="750">
+<div class="body">
+<h3>Gentler Nights Printable Sleep&nbsp;Kit</h3>
+<div class="meta">18 pages · A4 &amp; US Letter</div>
+<div class="price">$9.50</div>
+<p>Set up, track and review 14 calm nights.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/jhphin" data-slug="gn-printable-sleep-kit">BUY ON GUMROAD</a>
+</div>
+</article>
+</div>
+</section>
+
+<section id="alone-at-home">
+<div class="label">ALONE AT HOME</div>
+<h2>Alone at Home · <span class="rest">Dog Separation Anxiety</span></h2>
+<div class="grid">
+<article class="card" id="gumroad-aah-week-one-separation-training-planner">
+<img src="/images/printables/aah-week-one-separation-training-planner.webp" alt="Cover of the Week-One Separation Training Planner, with a preview of the five-step plan" width="1000" height="750">
+<div class="body">
+<h3>Week-One Separation Training&nbsp;Planner</h3>
+<div class="meta">8 pages · A4 &amp; US Letter</div>
+<div class="price">$5.50</div>
+<p>Cover every absence. Log every small step.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/uwgnsv" data-slug="aah-week-one-separation-training-planner">BUY ON GUMROAD</a>
+</div>
+</article>
+<article class="card" id="gumroad-aah-vet-first-red-flags-checklist">
+<img src="/images/printables/aah-vet-first-red-flags-checklist.webp" alt="Cover of the Vet-First Red Flags Checklist, with a preview of the checklist page" width="1000" height="750">
+<div class="body">
+<h3>Vet-First Red&nbsp;Flags Checklist</h3>
+<div class="meta">2 pages · A4 &amp; US Letter</div>
+<div class="price">$2.50</div>
+<p>Check this before any training plan.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/rxpttd" data-slug="aah-vet-first-red-flags-checklist">BUY ON GUMROAD</a>
+</div>
+</article>
+<article class="card featured" id="gumroad-aah-printable-training-kit">
+<img src="/images/printables/aah-printable-training-kit.webp" alt="Cover of the Alone at Home Printable Training Kit, with a preview of the kit contents page" width="1000" height="750">
+<div class="body">
+<h3>Alone at Home Printable Training&nbsp;Kit</h3>
+<div class="meta">11 pages · A4 &amp; US Letter</div>
+<div class="price">$6.50</div>
+<p>Gentle, force-free, one small step at a time.</p>
+<a class="btn" href="https://devideg.gumroad.com/l/zxlfel" data-slug="aah-printable-training-kit">BUY ON GUMROAD</a>
+</div>
+</article>
+</div>
+</section>
+
+<p class="fine">These printables are general information only, not medical or veterinary advice. Talk to your pediatrician or your vet about your own situation.</p>
+</div>
+<footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/printables/">Printables</a> · <a href="/blog/">Blog</a></footer>
+</body>
+</html>
