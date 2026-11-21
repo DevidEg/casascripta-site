@@ -68,6 +68,7 @@ footer a{color:var(--stone)}
   .author{grid-template-columns:1fr;text-align:center}
   .author img{margin:0 auto}
 }
+/* ckbox */.ckbox{margin:28px 0 30px;padding:26px 28px;background:#FBF8F2;border:1px solid #DDD5C6;max-width:620px}.ckbox .cklabel{font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.3em;color:#A8834A;margin:0 0 8px}.ckbox .ckh{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:26px;line-height:1.15;margin:0 0 8px;color:#1A1C1B}.ckbox .ckp{margin:0 0 16px;color:#6B6A64;font-size:15px;line-height:1.6}.ckbox form{display:flex;gap:10px;flex-wrap:wrap;margin:0}.ckbox .cksr{position:absolute;left:-9999px}.ckbox input{flex:1;min-width:220px;padding:12px 14px;border:1px solid #DDD5C6;background:#fff;font:inherit;font-size:15px;color:#1A1C1B}.ckbox button{border:0;cursor:pointer;display:inline-block;background:#5A1A1E;color:#F4F0E8;padding:13px 22px;border-radius:2px;font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.2em;box-shadow:inset 0 0 0 1px #A8834A,inset 0 0 0 4px #5A1A1E,inset 0 0 0 5px rgba(168,131,74,.6)}.ckbox button:hover{background:#461215}
 </style>
 <script type="application/ld+json">
 {
@@ -137,6 +138,17 @@ footer a{color:var(--stone)}
 <section class="block" id="sample">
   <h2>Start with a free checklist</h2>
   <p><a href="/samples/alone-at-home-sample.pdf">Read a free sample</a> (9 pages, PDF). You can also start with the free <a href="/free/">Vet-First Red Flags checklist</a> (A4 and US Letter, no signup), or read <a href="/blog/dog-separation-anxiety-apartment-week-one-plan/">Dog separation anxiety in apartments: a week-one plan</a> and <a href="/blog/how-long-can-a-dog-with-separation-anxiety-be-left-alone/">How long can a dog with separation anxiety be left alone?</a></p>
+<div class="ckbox" id="ckbox-dog">
+<!-- Kit form 10220949: "Casa Scripta - Vet-First Red Flags checklist" (double opt-in, confirm redirects to /free/). -->
+<p class="cklabel">FREE CHECKLIST BY EMAIL</p>
+<p class="ckh">Email me the Vet-First Red Flags Checklist</p>
+<p class="ckp">Optional. We'll email you a link to confirm your address, and confirming opens the checklist. You'll also get occasional tips and new Casa Scripta guides; unsubscribe any time. The direct download stays free, with no signup.</p>
+<form action="https://app.kit.com/forms/10220949/subscriptions" method="post">
+<label class="cksr" for="ck-email-book">Email address</label>
+<input id="ck-email-book" type="email" name="email_address" required placeholder="Your email address" autocomplete="email">
+<button type="submit">EMAIL ME THE CHECKLIST</button>
+</form>
+</div>
 </section>
 
 <section class="block" id="questions">
