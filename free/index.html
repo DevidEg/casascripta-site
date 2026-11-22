@@ -70,7 +70,7 @@ footer a{color:var(--stone)}
   .btn.ghost{margin-left:0}
   .card .btns .btn{text-align:center}
 }
-/* ckbox */.ckbox{margin:28px 0 30px;padding:26px 28px;background:#FBF8F2;border:1px solid #DDD5C6;max-width:620px}.ckbox .cklabel{font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.3em;color:#A8834A;margin:0 0 8px}.ckbox .ckh{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:26px;line-height:1.15;margin:0 0 8px;color:#1A1C1B}.ckbox .ckp{margin:0 0 16px;color:#6B6A64;font-size:15px;line-height:1.6}.ckbox form{display:flex;gap:10px;flex-wrap:wrap;margin:0}.ckbox .cksr{position:absolute;left:-9999px}.ckbox input{flex:1;min-width:220px;padding:12px 14px;border:1px solid #DDD5C6;background:#fff;font:inherit;font-size:15px;color:#1A1C1B}.ckbox button{border:0;cursor:pointer;display:inline-block;background:#5A1A1E;color:#F4F0E8;padding:13px 22px;border-radius:2px;font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.2em;box-shadow:inset 0 0 0 1px #A8834A,inset 0 0 0 4px #5A1A1E,inset 0 0 0 5px rgba(168,131,74,.6)}.ckbox button:hover{background:#461215}
+/* ckbox */.ckbox{margin:28px 0 30px;padding:26px 28px;background:#FBF8F2;border:1px solid #DDD5C6;max-width:620px}.ckbox .cklabel{font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.3em;color:#A8834A;margin:0 0 8px}.ckbox .ckh{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:26px;line-height:1.15;margin:0 0 8px;color:#1A1C1B}.ckbox .ckp{margin:0 0 16px;color:#6B6A64;font-size:15px;line-height:1.6}.ckbox form{display:flex;gap:10px;flex-wrap:wrap;margin:0}.ckbox .cksr{position:absolute;left:-9999px}.ckbox input{flex:1;min-width:220px;padding:12px 14px;border:1px solid #DDD5C6;background:#fff;font:inherit;font-size:15px;color:#1A1C1B}.ckbox button{border:0;cursor:pointer;display:inline-block;background:#5A1A1E;color:#F4F0E8;padding:13px 22px;border-radius:2px;font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.2em;box-shadow:inset 0 0 0 1px #A8834A,inset 0 0 0 4px #5A1A1E,inset 0 0 0 5px rgba(168,131,74,.6)}.ckbox button:hover{background:#461215}.cards .card{cursor:pointer}
 .cards{border-top:0;padding-top:16px}
 .gatebox{margin:48px auto 0;max-width:560px;text-align:center}
 .gatebox form{flex-direction:column;align-items:stretch;gap:0}
@@ -142,6 +142,7 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 </div>
 
 <div class="ckbox gatebox" id="get">
+<p class="ckp">Enter your email address to get the free checklist.</p>
 <!-- Kit form: 10224865 is a placeholder, to be replaced with the real Kit form ID before go-live. Hidden field fields[checklist] is set by the pop-up (safe-sleep / vet-first / home-alone / calmer-nights). -->
 <form id="gate" action="https://app.kit.com/forms/10224865/subscriptions" method="post">
 <label class="cksr" for="ck-email-free">Email address</label>
@@ -179,6 +180,10 @@ Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventL
 d.querySelector(".dclose").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});
 if(location.hash==="#pick")open();})();
+</script>
+<script>
+(function(){var g=document.getElementById("get"),e=document.getElementById("ck-email-free");if(!g||!e)return;
+Array.prototype.forEach.call(document.querySelectorAll(".cards .card"),function(c){c.addEventListener("click",function(){g.scrollIntoView({behavior:"smooth",block:"center"});try{e.focus({preventScroll:true})}catch(x){e.focus()}})});})();
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner); account casascripta. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>
