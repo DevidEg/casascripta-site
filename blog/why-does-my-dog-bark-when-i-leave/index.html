@@ -78,6 +78,7 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 #pick .dopt{width:100%;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);color:var(--ink);padding:15px 18px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;border-radius:2px;transition:border-color .2s,background .2s}
 #pick .dopt:hover{border-color:var(--brass);background:#fff}
 @media(max-width:720px){#pick h2{font-size:26px}#pick .dbox{padding:36px 20px 22px}}
+#pick h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why does my dog bark when I leave? How to tell what's behind it", "description": "Why does my dog bark when I leave? Learn how to tell separation distress from boredom or outside noise, why barking starts so fast, and what helps.", "url": "https://casascripta.com/blog/why-does-my-dog-bark-when-i-leave/", "mainEntityOfPage": "https://casascripta.com/blog/why-does-my-dog-bark-when-i-leave/", "datePublished": "2026-11-21", "dateModified": "2026-11-21", "inLanguage": "en", "image": "https://casascripta.com/images/og/alone-at-home-og.png", "author": {"@type": "Person", "name": "Devid Egli", "url": "https://casascripta.com/#about"}, "publisher": {"@type": "Organization", "name": "Casa Scripta", "url": "https://casascripta.com/"}}</script>
 </head>
@@ -225,6 +226,12 @@ The aim is to come back before your dog gets upset. Keep your absences shorter t
 </div>
 </dialog>
 <footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/blog/">Blog</a> · <a href="/privacy/">Privacy</a></footer>
+<script>
+/* #pick: keep the open pop-up centred in what the reader actually sees (visual viewport), at normal size, even when the page is wider than the screen. */
+(function(){var d=document.getElementById("pick"),vv=window.visualViewport;if(!d||!vv||!d.showModal)return;
+function place(){if(!d.open)return;var s=vv.scale||1,w=Math.min(480,vv.width*s-32);d.style.position="fixed";d.style.margin="0";d.style.width=w+"px";d.style.maxHeight=(vv.height*s-32)+"px";d.style.overflow="auto";d.style.transformOrigin="0 0";d.style.transform=s===1?"":"scale("+(1/s)+")";var h=d.offsetHeight;d.style.left=(vv.offsetLeft+(vv.width-w/s)/2)+"px";d.style.top=(vv.offsetTop+Math.max(16/s,(vv.height-h/s)/2))+"px"}
+var so=d.showModal;d.showModal=function(){so.call(d);place()};vv.addEventListener("resize",place);vv.addEventListener("scroll",place);})();
+</script>
 <script>
 (function(){var f=document.getElementById("gate"),d=document.getElementById("pick"),h=document.getElementById("ck-checklist");if(!f||!d||!d.showModal)return;
 function open(){h.value="";d.showModal()}
