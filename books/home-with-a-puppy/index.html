@@ -83,8 +83,18 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 #pick .dopt{width:100%;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);color:var(--ink);padding:15px 18px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;border-radius:2px;transition:border-color .2s,background .2s}
 #pick .dopt:hover{border-color:var(--brass);background:#fff}
 @media(max-width:720px){#pick h2{font-size:26px}#pick .dbox{padding:36px 20px 22px}}
+.ckgen .gpriv{align-self:flex-start;font-size:13px;color:var(--stone);text-decoration-color:var(--brass);text-underline-offset:3px;margin:8px 0 18px}
+.ckgen .gpriv{flex-basis:100%;margin:-2px 0 8px}
+.ckgen .gpriv:hover{color:var(--green)}
+.ckgen .gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+@media(min-width:721px){.ckgen .gpriv{order:3;margin:-2px 0 0}}
 .sources h3{font-size:24px;margin:28px 0 4px}
 .sources a{overflow-wrap:anywhere}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.srctoggle[hidden]{display:none}
+.srctoggle{border:0;cursor:pointer;margin-top:4px}
+.srctoggle:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+#sources-list{padding-top:18px}
 </style>
 <script type="application/ld+json">
 {
@@ -191,6 +201,8 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 
 <section class="block sources" id="sources">
   <h2>Sources</h2>
+  <button type="button" class="btn ghost srctoggle" id="sources-toggle" aria-expanded="true" aria-controls="sources-list" hidden>Hide sources</button>
+  <div id="sources-list">
   <p>All sources were opened and checked on 21 November 2026. Short tags in the text match the tags below.</p>
   <h3>Studies and reviews</h3>
   <ul>
@@ -237,6 +249,7 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
     <li><strong>DT Support Line:</strong> Dogs Trust. Behaviour Support Line. <a href="https://www.dogstrust.org.uk/get-help/behaviour-support-line">https://www.dogstrust.org.uk/get-help/behaviour-support-line</a></li>
     <li><strong>Pet Poison Helpline:</strong> Pet Poison Helpline. <a href="https://www.petpoisonhelpline.com/">https://www.petpoisonhelpline.com/</a></li>
     </ul>
+  </div>
 </section>
 
 <section class="block" id="questions">
@@ -254,6 +267,7 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 <label class="cksr" for="ck-email-book">Email address</label>
 <input id="ck-email-book" type="email" name="email_address" required placeholder="Your email address" autocomplete="email">
 <input type="hidden" name="fields[checklist]" id="ck-checklist" value="">
+<a class="gpriv" href="/privacy/">Privacy</a>
 <button type="button" id="gate-btn">Email me the checklist</button>
 </form>
 </div>
@@ -282,6 +296,11 @@ Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventL
 d.querySelector(".dclose").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});
 if(location.hash==="#pick")open();})();
+</script>
+<script>
+(function(){var b=document.getElementById("sources-toggle"),l=document.getElementById("sources-list");if(!b||!l)return;
+function set(open){l.hidden=!open;b.setAttribute("aria-expanded",open?"true":"false");b.textContent=open?"Hide sources":"Show all sources"}
+set(false);b.hidden=false;b.addEventListener("click",function(){set(l.hidden)});})();
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner); account casascripta. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>
