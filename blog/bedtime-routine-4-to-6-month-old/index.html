@@ -85,11 +85,10 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 #pick .dopt{width:100%;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);color:var(--ink);padding:15px 18px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;border-radius:2px;transition:border-color .2s,background .2s}
 #pick .dopt:hover{border-color:var(--brass);background:#fff}
 @media(max-width:720px){#pick h2{font-size:26px}#pick .dbox{padding:36px 20px 22px}}
-.ckgen .gpriv{align-self:flex-start;font-size:13px;color:var(--stone);text-decoration-color:var(--brass);text-underline-offset:3px;margin:8px 0 18px}
-.ckgen .gpriv{flex-basis:100%;margin:-2px 0 8px}
-.ckgen .gpriv:hover{color:var(--green)}
-.ckgen .gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-@media(min-width:721px){.ckgen .gpriv{order:3;margin:-2px 0 0}}
+/* Privacy link directly below the general box (box margin-bottom 30px: -20px leaves a 10px gap, then 30px restores the space after the box) */
+.ckgen+.gpriv{display:table;font-size:13px;color:var(--stone);text-decoration-color:var(--brass);text-underline-offset:3px;margin:-20px 0 30px}
+.ckgen+.gpriv:hover{color:var(--green)}
+.ckgen+.gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 #pick h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
 #sources+ul{overflow-wrap:anywhere}
 </style>
@@ -174,10 +173,10 @@ It may help your baby settle more easily, but it isn't a promise. Babies this ag
 <label class="cksr" for="ck-email-post">Email address</label>
 <input id="ck-email-post" type="email" name="email_address" required placeholder="Your email address" autocomplete="email">
 <input type="hidden" name="fields[checklist]" id="ck-checklist" value="">
-<a class="gpriv" href="/privacy/">Privacy</a>
 <button type="button" id="gate-btn">Email me the checklist</button>
 </form>
 </div>
+<a class="gpriv" href="/privacy/">Privacy</a>
 <p class="pin-wrap"><img class="pin-img" src="/images/pins/bedtime-routine-4-to-6-month-old.jpg" alt="Pinterest graphic for the Casa Scripta guide “Bedtime routine for a 4 to 6 month old.”" width="1000" height="1500" loading="lazy" data-pin-description="Bedtime routine for a 4 to 6 month old: a calm, simple guide. A no-cry routine from Casa Scripta, with safe-sleep basics and where the feed fits."></p>
 <h2>Want the full plan?</h2>
 <p>If you'd like this routine built into a step-by-step plan, my Casa Scripta guide, <a href="https://devideg.gumroad.com/l/mhvsc"><em>Gentler Nights</em></a>, has a full safe-sleep chapter, a gentle 14-night plan with no cry-it-out, printable sleep diaries and a bedtime routine card. It's a plan, not a promise. You can also read about it on the <a href="/books/gentler-nights/">Gentler Nights book page</a>.</p>
