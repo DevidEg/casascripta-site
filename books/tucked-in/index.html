@@ -69,6 +69,20 @@ footer a{color:var(--stone)}
   .author img{margin:0 auto}
 }
 /* ckbox */.ckbox{margin:28px 0 30px;padding:26px 28px;background:#FBF8F2;border:1px solid #DDD5C6;max-width:620px}.ckbox .cklabel{font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.3em;color:#A8834A;margin:0 0 8px}.ckbox .ckh{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:26px;line-height:1.15;margin:0 0 8px;color:#1A1C1B}.ckbox .ckp{margin:0 0 16px;color:#6B6A64;font-size:15px;line-height:1.6}.ckbox form{display:flex;gap:10px;flex-wrap:wrap;margin:0}.ckbox .cksr{position:absolute;left:-9999px}.ckbox input{flex:1;min-width:220px;padding:12px 14px;border:1px solid #DDD5C6;background:#fff;font:inherit;font-size:15px;color:#1A1C1B}.ckbox button{border:0;cursor:pointer;display:inline-block;background:#5A1A1E;color:#F4F0E8;padding:13px 22px;border-radius:2px;font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;letter-spacing:.2em;box-shadow:inset 0 0 0 1px #A8834A,inset 0 0 0 4px #5A1A1E,inset 0 0 0 5px rgba(168,131,74,.6)}.ckbox button:hover{background:#461215}
+/* ckgen: general checklist box + pick pop-up (copied from /free/) */
+.cksmall{margin:0;color:var(--stone);font-size:15px;line-height:1.6}
+.ckbox button:focus-visible,.dopt:focus-visible,.dclose:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+dialog#pick{margin:auto;border:1px solid var(--line);border-top:3px solid var(--brass);padding:0;background:var(--paper);color:var(--ink);width:min(480px,calc(100vw - 32px));max-width:none;box-shadow:0 18px 50px rgba(26,28,27,.25)}
+dialog#pick:focus{outline:none}
+dialog#pick::backdrop{background:rgba(26,28,27,.55)}
+#pick .dbox{position:relative;padding:40px 28px 28px}
+#pick h2{font-size:30px;margin:0 28px 22px 0}
+#pick .dclose{position:absolute;top:8px;right:10px;width:40px;height:40px;border:0;background:transparent;color:var(--stone);font-size:28px;line-height:1;cursor:pointer;font-family:inherit}
+#pick .dclose:hover{color:var(--ink)}
+#pick .dopts{display:flex;flex-direction:column;gap:12px}
+#pick .dopt{width:100%;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);color:var(--ink);padding:15px 18px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;border-radius:2px;transition:border-color .2s,background .2s}
+#pick .dopt:hover{border-color:var(--brass);background:#fff}
+@media(max-width:720px){#pick h2{font-size:26px}#pick .dbox{padding:36px 20px 22px}}
 </style>
 <script type="application/ld+json">
 {
@@ -173,13 +187,50 @@ footer a{color:var(--stone)}
   <p style="margin-top:16px">Fourteen nights is the length of the plan, not a promise. Every child is different, and results vary. This is general information only. It is not medical advice, and it doesn't replace your child's doctor or nurse. Check the red flags in Worksheet 2 before you start. In an emergency, call 911 in the US or Canada, 999 in the UK, or 000 in Australia.</p>
 </section>
 
+<section class="block" id="sample">
+<h2>Start with a free checklist</h2>
+<p class="cksmall">Choose one of our many Checklists.</p>
+<div class="ckbox ckgen" id="get">
+<!-- Kit form 10224865 (general, same as /free/): hidden field fields[checklist] is set by the pop-up (safe-sleep / vet-first / home-alone / calmer-nights). -->
+<p class="ckp">We'll email you a link to confirm your address, and confirming opens the checklist. You'll also get occasional tips and new Casa Scripta guides; unsubscribe any time.</p>
+<form id="gate" action="https://app.kit.com/forms/10224865/subscriptions" method="post">
+<label class="cksr" for="ck-email-book">Email address</label>
+<input id="ck-email-book" type="email" name="email_address" required placeholder="Your email address" autocomplete="email">
+<input type="hidden" name="fields[checklist]" id="ck-checklist" value="">
+<button type="button" id="gate-btn">Email me the checklist</button>
+</form>
+</div>
+</section>
+
 <section class="block" id="questions">
   <h2>Questions or problems</h2>
   <p>If this guide didn't help, email <a href="mailto:devid@casascripta.com">devid@casascripta.com</a> within 30 days of purchase for a full refund.</p>
 </section>
 
 </div>
+<dialog id="pick" aria-labelledby="pick-title">
+<div class="dbox">
+<button type="button" class="dclose" aria-label="Close">×</button>
+<h2 id="pick-title">Which checklist would you like?</h2>
+<div class="dopts">
+<button type="button" class="dopt" value="safe-sleep">Safe Sleep Checklist</button>
+<button type="button" class="dopt" value="vet-first">Vet-First Red Flags Checklist</button>
+<button type="button" class="dopt" value="home-alone">Home Alone, Calmer checklist</button>
+<button type="button" class="dopt" value="calmer-nights">Calmer Nights checklist</button>
+</div>
+</div>
+</dialog>
 <footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/for-creators/">For creators</a> · <a href="/printables/">Printables</a> · <a href="/free/">Free printables</a> · <a href="/blog/">Blog</a> · <a href="/privacy/">Privacy</a></footer>
+<script>
+(function(){var f=document.getElementById("gate"),d=document.getElementById("pick"),h=document.getElementById("ck-checklist");if(!f||!d||!d.showModal)return;
+function open(){h.value="";d.showModal()}
+document.getElementById("gate-btn").addEventListener("click",function(){if(f.reportValidity())open()});
+f.addEventListener("submit",function(e){if(!h.value){e.preventDefault();if(f.reportValidity())open()}});
+Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventListener("click",function(){h.value=b.value;d.close();f.submit()})});
+d.querySelector(".dclose").addEventListener("click",function(){d.close()});
+d.addEventListener("click",function(e){if(e.target===d)d.close()});
+if(location.hash==="#pick")open();})();
+</script>
 <!-- GoatCounter visit counter (no cookies, no banner); account casascripta. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>
 </body>
