@@ -83,7 +83,14 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 .ckgen+.gpriv:hover{color:var(--green)}
 .ckgen+.gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 #pick h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
-#sources+ul{overflow-wrap:anywhere}
+#sources+ul,#sources-list>ul{overflow-wrap:anywhere}
+.btn{display:inline-block;background:#5A1A1E;color:var(--paper);padding:15px 30px;border-radius:2px;text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-size:13px;letter-spacing:.2em;transition:background .2s;box-shadow:inset 0 0 0 1px #A8834A, inset 0 0 0 4px #5A1A1E, inset 0 0 0 5px rgba(168,131,74,.6)}
+.btn:hover{background:#461215}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.srctoggle[hidden]{display:none}
+.srctoggle{border:0;cursor:pointer;margin-top:4px}
+.srctoggle:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+#sources-list{padding-top:18px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Are wake windows real? What the evidence says, and what to watch instead", "description": "Are wake windows real? There's no study behind exact wake window charts. Here's what the rough guides say for 4- and 6-month-olds, and what to watch instead.", "url": "https://casascripta.com/blog/are-wake-windows-real/", "mainEntityOfPage": "https://casascripta.com/blog/are-wake-windows-real/", "datePublished": "2026-11-21", "dateModified": "2026-11-21", "inLanguage": "en", "image": "https://casascripta.com/images/og/gentler-nights-og.png", "author": {"@type": "Person", "name": "Devid Egli", "url": "https://casascripta.com/#about"}, "publisher": {"@type": "Organization", "name": "Casa Scripta", "url": "https://casascripta.com/"}}</script>
 </head>
@@ -185,6 +192,8 @@ A short, calm routine is one of the gentlest things you can add. See my <a href=
 <h2>Want the whole plan?</h2>
 <p>If you want a calm, step-by-step plan, our Casa Scripta guide, <a href="https://devideg.gumroad.com/l/mhvsc"><em>Gentler Nights</em></a>, includes the full 3-Day Sleep Diary (Worksheet 1), tired signs and rough awake times, and a gentle 14-night plan. It's a plan, not a promise, and every baby is different. You can also read about it on the <a href="/books/gentler-nights/">Gentler Nights book page</a>.</p>
 <h2 id="sources">Sources</h2>
+<button type="button" class="btn ghost srctoggle" id="sources-toggle" aria-expanded="true" aria-controls="sources-list" hidden>Hide sources</button>
+<div id="sources-list">
 <ul>
 <li>Tresillian, 3-6 Month Baby Sleep: https://www.tresillian.org.au/baby/sleep/3-to-6-months/</li>
 <li>Raising Children Network, How to get babies to sleep at 3-6 months: https://raisingchildren.net.au/babies/sleep/settling-routines/helping-babies-sleep-settle-3-6-months</li>
@@ -195,6 +204,7 @@ A short, calm routine is one of the gentlest things you can add. See my <a href=
 <li>Mindell JA, et al. Developmental aspects of sleep hygiene: findings from the 2004 National Sleep Foundation Sleep in America Poll. Sleep Med. 2009: https://pubmed.ncbi.nlm.nih.gov/19285450/ (doi:10.1016/j.sleep.2008.07.016)</li>
 <li>Moon RY, et al.; AAP Task Force on Sudden Infant Death Syndrome and Committee on Fetus and Newborn. Sleep-related infant deaths: updated 2022 recommendations for reducing infant deaths in the sleep environment. Pediatrics. 2022: https://pubmed.ncbi.nlm.nih.gov/35726558/ (doi:10.1542/peds.2022-057990)</li>
 </ul>
+</div>
 </article>
 </div>
 <dialog id="pick" aria-labelledby="pick-title">
@@ -219,6 +229,11 @@ Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventL
 d.querySelector(".dclose").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});
 if(location.hash==="#pick")open();})();
+</script>
+<script>
+(function(){var b=document.getElementById("sources-toggle"),l=document.getElementById("sources-list");if(!b||!l)return;
+function set(open){l.hidden=!open;b.setAttribute("aria-expanded",open?"true":"false");b.textContent=open?"Hide sources":"Show all sources"}
+set(false);b.hidden=false;b.addEventListener("click",function(){set(l.hidden)});})();
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner). PLACEHOLDER: replace CODE with the site code Devid picks when he creates the free account at goatcounter.com (e.g. https://casascripta.goatcounter.com/count). Must be replaced before this goes live. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>

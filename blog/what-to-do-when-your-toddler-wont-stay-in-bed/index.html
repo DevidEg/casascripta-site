@@ -83,7 +83,14 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 .ckgen+.gpriv:hover{color:var(--green)}
 .ckgen+.gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 #pick h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
-#sources+ul{overflow-wrap:anywhere}
+#sources+ul,#sources-list>ul{overflow-wrap:anywhere}
+.btn{display:inline-block;background:#5A1A1E;color:var(--paper);padding:15px 30px;border-radius:2px;text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-size:13px;letter-spacing:.2em;transition:background .2s;box-shadow:inset 0 0 0 1px #A8834A, inset 0 0 0 4px #5A1A1E, inset 0 0 0 5px rgba(168,131,74,.6)}
+.btn:hover{background:#461215}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.srctoggle[hidden]{display:none}
+.srctoggle{border:0;cursor:pointer;margin-top:4px}
+.srctoggle:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+#sources-list{padding-top:18px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What to do when your toddler won't stay in bed", "description": "What to do when your toddler won't stay in bed: a short, same-every-night routine, one calm walk back, and the signs it's time to talk to your doctor.", "url": "https://casascripta.com/blog/what-to-do-when-your-toddler-wont-stay-in-bed/", "mainEntityOfPage": "https://casascripta.com/blog/what-to-do-when-your-toddler-wont-stay-in-bed/", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "inLanguage": "en", "image": "https://casascripta.com/images/og/tucked-in-og.png", "author": {"@type": "Person", "name": "Devid Egli", "url": "https://casascripta.com/#about"}, "publisher": {"@type": "Organization", "name": "Casa Scripta", "url": "https://casascripta.com/"}}</script>
 </head>
@@ -161,6 +168,8 @@ Raising Children Network suggests delaying the older child's bedtime by about ha
 <h2>Want the whole plan?</h2>
 <p>If you'd like every step in one place, our Casa Scripta guide, <a href="/books/tucked-in/"><em>Tucked In</em></a>, has the 3-day set-up, a 14-night plan for stalling and getting out of bed, the bedtime pass, a room-safety check and a Day 14 review. Fourteen nights is the length of the plan, not a promise. Every child is different, and results vary. You can also read about it on the <a href="/books/tucked-in/">Tucked In book page</a>.</p>
 <h2 id="sources">Sources</h2>
+<button type="button" class="btn ghost srctoggle" id="sources-toggle" aria-expanded="true" aria-controls="sources-list" hidden>Hide sources</button>
+<div id="sources-list">
 <ul>
 <li>American Academy of Pediatrics, Toddler won't go to sleep? 7 tips to help end bedtime battles: https://www.healthychildren.org/English/healthy-living/sleep/Pages/bedtime-trouble.aspx</li>
 <li>American Academy of Pediatrics, Big kid beds: when to switch from a crib: https://www.healthychildren.org/English/healthy-living/sleep/Pages/Big-Kid-Beds-When-To-Make-the-Switch.aspx</li>
@@ -184,6 +193,7 @@ Raising Children Network suggests delaying the older child's bedtime by about ha
 <li>Moore BA, et al. Evaluating the Bedtime Pass Program for child resistance to bedtime. J Pediatr Psychol. 2007: https://pubmed.ncbi.nlm.nih.gov/16899650/ (doi:10.1093/jpepsy/jsl025)</li>
 <li>Paruthi S, et al. Recommended amount of sleep for pediatric populations. J Clin Sleep Med. 2016: https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308/ (doi:10.5664/jcsm.5866)</li>
 </ul>
+</div>
 </article>
 </div>
 <dialog id="pick" aria-labelledby="pick-title">
@@ -208,6 +218,11 @@ Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventL
 d.querySelector(".dclose").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});
 if(location.hash==="#pick")open();})();
+</script>
+<script>
+(function(){var b=document.getElementById("sources-toggle"),l=document.getElementById("sources-list");if(!b||!l)return;
+function set(open){l.hidden=!open;b.setAttribute("aria-expanded",open?"true":"false");b.textContent=open?"Hide sources":"Show all sources"}
+set(false);b.hidden=false;b.addEventListener("click",function(){set(l.hidden)});})();
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner); account casascripta. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>

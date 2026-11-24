@@ -101,6 +101,11 @@ dialog.li-dialog::backdrop{background:rgba(26,28,27,.55)}
 .li-dialog .li-close:hover{color:var(--ink)}
 #faq h3{font-size:24px;margin:28px 0 4px}
 @media(max-width:720px){.look-inside{grid-template-columns:1fr 1fr;gap:12px}}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.srctoggle[hidden]{display:none}
+.srctoggle{border:0;cursor:pointer;margin-top:4px}
+.srctoggle:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+#sources-list{padding-top:18px}
 </style>
 <script type="application/ld+json">
 {
@@ -270,6 +275,8 @@ dialog.li-dialog::backdrop{background:rgba(26,28,27,.55)}
 
 <section class="block sources" id="sources">
   <h2>Sources</h2>
+  <button type="button" class="btn ghost srctoggle" id="sources-toggle" aria-expanded="true" aria-controls="sources-list" hidden>Hide sources</button>
+  <div id="sources-list">
   <p>Every fact in the book is linked to its source. The book cites the organizations below, among others, plus published research. None of them has reviewed or endorsed it. Links go to the same pages listed in the book's bibliography (checked November 2026).</p>
   <ul>
     <li><a href="https://doi.org/10.1542/peds.2022-057990">American Academy of Pediatrics, 2022 safe-sleep policy</a></li>
@@ -278,6 +285,7 @@ dialog.li-dialog::backdrop{background:rgba(26,28,27,.55)}
     <li><a href="https://rednose.org.au/safe-sleep-and-safer-pregnancy/pregnancy-to-birth/six-safe-sleep-recommendations/">Red Nose Australia, Six safe sleep recommendations</a></li>
     <li><a href="https://www.lullabytrust.org.uk/">The Lullaby Trust (UK)</a></li>
   </ul>
+  </div>
 </section>
 
 </div>
@@ -304,6 +312,11 @@ Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventL
 d.querySelector(".dclose").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});
 if(location.hash==="#pick")open();})();
+</script>
+<script>
+(function(){var b=document.getElementById("sources-toggle"),l=document.getElementById("sources-list");if(!b||!l)return;
+function set(open){l.hidden=!open;b.setAttribute("aria-expanded",open?"true":"false");b.textContent=open?"Hide sources":"Show all sources"}
+set(false);b.hidden=false;b.addEventListener("click",function(){set(l.hidden)});})();
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner); account casascripta. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>

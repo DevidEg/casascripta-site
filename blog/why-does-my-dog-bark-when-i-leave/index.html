@@ -83,7 +83,14 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 .ckgen+.gpriv:hover{color:var(--green)}
 .ckgen+.gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 #pick h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
-#sources+ul{overflow-wrap:anywhere}
+#sources+ul,#sources-list>ul{overflow-wrap:anywhere}
+.btn{display:inline-block;background:#5A1A1E;color:var(--paper);padding:15px 30px;border-radius:2px;text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-size:13px;letter-spacing:.2em;transition:background .2s;box-shadow:inset 0 0 0 1px #A8834A, inset 0 0 0 4px #5A1A1E, inset 0 0 0 5px rgba(168,131,74,.6)}
+.btn:hover{background:#461215}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.srctoggle[hidden]{display:none}
+.srctoggle{border:0;cursor:pointer;margin-top:4px}
+.srctoggle:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+#sources-list{padding-top:18px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why does my dog bark when I leave? How to tell what's behind it", "description": "Why does my dog bark when I leave? Learn how to tell separation distress from boredom or outside noise, why barking starts so fast, and what helps.", "url": "https://casascripta.com/blog/why-does-my-dog-bark-when-i-leave/", "mainEntityOfPage": "https://casascripta.com/blog/why-does-my-dog-bark-when-i-leave/", "datePublished": "2026-11-21", "dateModified": "2026-11-21", "inLanguage": "en", "image": "https://casascripta.com/images/og/alone-at-home-og.png", "author": {"@type": "Person", "name": "Devid Egli", "url": "https://casascripta.com/#about"}, "publisher": {"@type": "Organization", "name": "Casa Scripta", "url": "https://casascripta.com/"}}</script>
 </head>
@@ -202,6 +209,8 @@ The aim is to come back before your dog gets upset. Keep your absences shorter t
 <h2>Want the whole plan?</h2>
 <p>Does the checklist point to separation distress? Our Casa Scripta guide, <a href="https://devideg.gumroad.com/l/qcxxca"><em>Alone at Home</em></a>, can help. It has the full Rule-Out Checklist (Worksheet 3) and the Stress Signs card (Worksheet 7). It also has a week-one plan and a gentle 4-week plan. It's a plan, not a promise, and many dogs need months. You can also read about it on the <a href="/books/alone-at-home/">Alone at Home book page</a>.</p>
 <h2 id="sources">Sources</h2>
+<button type="button" class="btn ghost srctoggle" id="sources-toggle" aria-expanded="true" aria-controls="sources-list" hidden>Hide sources</button>
+<div id="sources-list">
 <ul>
 <li>ASPCA, Separation Anxiety: https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety</li>
 <li>RSPCA, Separation Anxiety in Dogs: https://www.rspca.org.uk/adviceandwelfare/pets/dogs/behaviour/separationrelatedbehaviour</li>
@@ -217,6 +226,7 @@ The aim is to come back before your dog gets upset. Keep your absences shorter t
 <li>Mills DS, et al. Pain and problem behavior in cats and dogs. Animals. 2020: https://pubmed.ncbi.nlm.nih.gov/32085528/ (doi:10.3390/ani10020318)</li>
 <li>Blackwell E, et al. Controlled trial of behavioural therapy for separation-related disorders in dogs. Vet Rec. 2006: https://pubmed.ncbi.nlm.nih.gov/16632528/ (doi:10.1136/vr.158.16.551)</li>
 </ul>
+</div>
 </article>
 </div>
 <dialog id="pick" aria-labelledby="pick-title">
@@ -241,6 +251,11 @@ Array.prototype.forEach.call(d.querySelectorAll(".dopt"),function(b){b.addEventL
 d.querySelector(".dclose").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});
 if(location.hash==="#pick")open();})();
+</script>
+<script>
+(function(){var b=document.getElementById("sources-toggle"),l=document.getElementById("sources-list");if(!b||!l)return;
+function set(open){l.hidden=!open;b.setAttribute("aria-expanded",open?"true":"false");b.textContent=open?"Hide sources":"Show all sources"}
+set(false);b.hidden=false;b.addEventListener("click",function(){set(l.hidden)});})();
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner). PLACEHOLDER: replace CODE with the site code Devid picks when he creates the free account at goatcounter.com (e.g. https://casascripta.goatcounter.com/count). Must be replaced before this goes live. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>
