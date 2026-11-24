@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tucked In | Casa Scripta</title>
+<title>Tucked In: A calm plan for bedtime battles | Casa Scripta</title>
 <link rel="preload" as="image" href="/images/books/tucked-in-final.webp" type="image/webp" fetchpriority="high">
 
 <meta name="description" content="This book gives you a 3-day set-up and a 14-night plan. By the end, you'll have one calm bedtime routine, one clear plan for your toddler's main sleep problem, and a simple way to see if it's working.">
 <link rel="canonical" href="https://casascripta.com/books/tucked-in/">
-<meta property="og:title" content="Tucked In | Casa Scripta">
+<meta property="og:title" content="Tucked In: A calm plan for bedtime battles | Casa Scripta">
 <meta property="og:description" content="This book gives you a 3-day set-up and a 14-night plan. By the end, you'll have one calm bedtime routine, one clear plan for your toddler's main sleep problem, and a simple way to see if it's working.">
 <meta property="og:image" content="https://casascripta.com/images/og/tucked-in-og.png">
 <meta property="og:image:width" content="1200">
@@ -94,6 +94,20 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 .srctoggle{border:0;cursor:pointer;margin-top:4px}
 .srctoggle:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 #sources-list{padding-top:18px}
+/* look-inside (Freyja site-design 2026-11-24 section 2) + enlarge dialog + FAQ */
+.look-inside{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.look-inside button{appearance:none;border:0;padding:0;background:var(--paper);cursor:zoom-in;display:block;width:100%}
+.look-inside img{width:100%;height:auto;display:block;border:1px solid var(--line);box-shadow:4px 6px 14px rgba(0,0,0,.12)}
+.look-inside figcaption{font-size:13px;color:var(--ink);margin:8px 0 0;line-height:1.35}
+.look-inside button:focus-visible,.li-close:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+dialog.li-dialog{margin:auto;border:1px solid var(--line);padding:0;background:var(--paper);color:var(--ink);max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);box-shadow:0 18px 50px rgba(26,28,27,.25)}
+dialog.li-dialog::backdrop{background:rgba(26,28,27,.55)}
+.li-dialog .li-box{position:relative;padding:48px 16px 16px}
+.li-dialog img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 98px);margin:0 auto;object-fit:contain;background:var(--paper)}
+.li-dialog .li-close{position:absolute;top:4px;right:6px;width:40px;height:40px;border:0;background:transparent;color:var(--stone);font-size:28px;line-height:1;cursor:pointer;font-family:inherit}
+.li-dialog .li-close:hover{color:var(--ink)}
+#faq h3{font-size:24px;margin:28px 0 4px}
+@media(max-width:720px){.look-inside{grid-template-columns:1fr 1fr;gap:12px}}
 </style>
 <script type="application/ld+json">
 {
@@ -184,6 +198,16 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
   </div>
 </div>
 
+<section class="block" id="look-inside">
+  <h2>Look inside</h2>
+  <div class="look-inside">
+    <figure><button type="button" data-full="/images/look-inside/tucked-in/p04-contents.webp"><img src="/images/look-inside/tucked-in/p04-contents-600.webp" srcset="/images/look-inside/tucked-in/p04-contents-600.webp 600w, /images/look-inside/tucked-in/p04-contents.webp 1200w" sizes="(max-width: 720px) 45vw, 219px" width="1200" height="1553" loading="lazy" decoding="async" alt="Contents"></button><figcaption>Contents</figcaption></figure>
+    <figure><button type="button" data-full="/images/look-inside/tucked-in/p05-start-here.webp"><img src="/images/look-inside/tucked-in/p05-start-here-600.webp" srcset="/images/look-inside/tucked-in/p05-start-here-600.webp 600w, /images/look-inside/tucked-in/p05-start-here.webp 1200w" sizes="(max-width: 720px) 45vw, 219px" width="1200" height="1553" loading="lazy" decoding="async" alt="Start here (2 minutes)"></button><figcaption>Start here (2 minutes)</figcaption></figure>
+    <figure><button type="button" data-full="/images/look-inside/tucked-in/p16-which-problem.webp"><img src="/images/look-inside/tucked-in/p16-which-problem-600.webp" srcset="/images/look-inside/tucked-in/p16-which-problem-600.webp 600w, /images/look-inside/tucked-in/p16-which-problem.webp 1200w" sizes="(max-width: 720px) 45vw, 219px" width="1200" height="1553" loading="lazy" decoding="async" alt="Worksheet 3: Which Problem Is It?"></button><figcaption>Worksheet 3: Which Problem Is It?</figcaption></figure>
+    <figure><button type="button" data-full="/images/look-inside/tucked-in/p24-14-night-tracker.webp"><img src="/images/look-inside/tucked-in/p24-14-night-tracker-600.webp" srcset="/images/look-inside/tucked-in/p24-14-night-tracker-600.webp 600w, /images/look-inside/tucked-in/p24-14-night-tracker.webp 1200w" sizes="(max-width: 720px) 45vw, 219px" width="1200" height="1553" loading="lazy" decoding="async" alt="Worksheet 7: 14-Night Tracker"></button><figcaption>Worksheet 7: 14-Night Tracker</figcaption></figure>
+  </div>
+</section>
+
 <section class="block" id="inside">
   <h2>What's inside</h2>
   <ul>
@@ -196,6 +220,20 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
   <h2>Who it's for, and who it isn't</h2>
   <p>Tucked In is a calm plan for bedtime battles, night waking and early rising, for children aged 18 months to 4.</p>
   <p style="margin-top:16px">Fourteen nights is the length of the plan, not a promise. Every child is different, and results vary. This is general information only. It is not medical advice, and it doesn't replace your child's doctor or nurse. Check the red flags in Worksheet 2 before you start. In an emergency, call 911 in the US or Canada, 999 in the UK, or 000 in Australia.</p>
+</section>
+
+<section class="block" id="faq">
+  <h2>Questions before you buy</h2>
+  <h3>What age is it for?</h3>
+  <p>Tucked In is a calm plan for bedtime battles, night waking and early rising, for children aged 18 months to 4.</p>
+  <h3>Is it medical advice?</h3>
+  <p>It is not medical advice, and it doesn't replace your child's doctor or nurse. Check the red flags in Worksheet 2 before you start.</p>
+  <h3>What format is it?</h3>
+  <p>The book (PDF, 51 pages)</p>
+  <h3>Can I print the worksheets?</h3>
+  <p>A print pack at the back of the same PDF: Worksheets 1–9, the same sheets as in the chapters, for printing or copying by hand</p>
+  <h3>What if it doesn't help?</h3>
+  <p>If this guide didn't help, email <a href="mailto:devid@casascripta.com">devid@casascripta.com</a> within 30 days of purchase for a full refund.</p>
 </section>
 
 <section class="block sources" id="sources">
@@ -287,6 +325,7 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 </div>
 </div>
 </dialog>
+<dialog class="li-dialog" id="li-dialog" aria-label="Look inside"><div class="li-box"><button type="button" class="li-close" aria-label="Close">×</button><img id="li-img" alt="" width="1200" height="1553"></div></dialog>
 <footer><span class="cinzel">CASA SCRIPTA · MMXXVI</span>© 2026 Casa Scripta · <a href="/for-creators/">For creators</a> · <a href="/printables/">Printables</a> · <a href="/free/">Free printables</a> · <a href="/blog/">Blog</a> · <a href="/privacy/">Privacy</a><br>Created with the help of AI. We only use information backed by studies and real sources, nothing made up.</footer>
 <script>
 (function(){var f=document.getElementById("gate"),d=document.getElementById("pick"),h=document.getElementById("ck-checklist");if(!f||!d||!d.showModal)return;
@@ -305,5 +344,11 @@ set(false);b.hidden=false;b.addEventListener("click",function(){set(l.hidden)});
 </script>
 <!-- GoatCounter visit counter (no cookies, no banner); account casascripta. Loaded after the page load event so it stays off the LCP path. -->
 <script>addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://casascripta.goatcounter.com/count");document.body.appendChild(s)})</script>
+<script>
+(function(){var d=document.getElementById("li-dialog"),im=document.getElementById("li-img");if(!d||!im||!d.showModal)return;
+Array.prototype.forEach.call(document.querySelectorAll(".look-inside button"),function(b){b.addEventListener("click",function(){var t=b.querySelector("img");im.src=b.getAttribute("data-full");im.alt=t.alt;d.showModal()})});
+d.querySelector(".li-close").addEventListener("click",function(){d.close()});
+d.addEventListener("click",function(e){if(e.target===d)d.close()});})();
+</script>
 </body>
 </html>
