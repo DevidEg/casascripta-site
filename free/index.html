@@ -75,8 +75,8 @@ footer a{color:var(--stone)}
 .gatebox{margin:48px auto 0;max-width:560px;text-align:center}
 .gatebox form{flex-direction:column;align-items:stretch;gap:0}
 .gatebox input{width:100%;min-width:0;flex:none}
-.gatebox .gpriv{align-self:flex-start;font-size:13px;color:var(--stone);text-decoration-color:var(--brass);text-underline-offset:3px;margin:8px 0 18px}
-.gatebox .gpriv:hover{color:var(--green)}
+.gatebox+.gpriv{display:table;font-size:13px;color:var(--stone);text-decoration-color:var(--brass);text-underline-offset:3px;margin:12px auto 0}
+.gatebox+.gpriv:hover{color:var(--green)}
 .gatebox button{font-size:18px;letter-spacing:.08em;padding:19px 22px;white-space:nowrap}
 .gatebox .gsmall{margin:12px 0 0;color:var(--stone);font-size:12.5px;line-height:1.6}
 .ckbox button:focus-visible,.dopt:focus-visible,.dclose:focus-visible,.gpriv:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
@@ -148,11 +148,11 @@ dialog#pick::backdrop{background:rgba(26,28,27,.55)}
 <label class="cksr" for="ck-email-free">Email address</label>
 <input id="ck-email-free" type="email" name="email_address" required placeholder="Your email address" autocomplete="email">
 <input type="hidden" name="fields[checklist]" id="ck-checklist" value="">
-<a class="gpriv" href="/privacy/">Privacy</a>
 <button type="button" id="gate-btn">Get your free sample.</button>
 <p class="gsmall">Subscribe to our free newsletter.<br>Unsubscribe anytime.</p>
 </form>
 </div>
+<a class="gpriv" href="/privacy/">Privacy</a>
 </section>
 
 <dialog id="pick" aria-labelledby="pick-title">
