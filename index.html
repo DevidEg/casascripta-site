@@ -72,7 +72,71 @@ section h2{font-size:clamp(34px,4.6vw,48px);margin-bottom:24px}
 .contact p{color:var(--stone);margin:-6px 0 34px}
 footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--stone);font-size:13px}
 footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
+.hero-for,.hero-covers,.hero-free{display:none}
 @media(max-width:720px){nav{flex-wrap:wrap;gap:12px}nav .links{display:flex;flex-wrap:wrap;gap:8px 0}nav .links a{margin-left:0;margin-right:18px}.hero{padding:70px 0 80px}section{padding:68px 0}.steps{grid-template-columns:1fr;gap:28px;margin-top:36px}.about{grid-template-columns:1fr;gap:30px;text-align:center}.about img{margin:0 auto;width:190px;height:190px}.label:before{display:none}}
+/* phone first screen (Freyja site-design 2026-11-24 section 1) */
+@media (max-width: 720px) {
+  nav { padding: 12px 0; }
+  .hero { padding: 16px 0 20px; }
+  .heroseal { width: 56px; height: 56px; margin: 0 auto 12px; }
+  .hero .wordmark,
+  .hero .year,
+  .hero .rule,
+  .hero > a.btn { display: none; }
+  .hero-for {
+    display: block;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .hero h1 {
+    font-size: 20px;
+    line-height: 1.35;
+    margin: 0 0 12px;
+  }
+  .hero-covers {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 0 14px;
+    padding-bottom: 2px;
+  }
+  .hero-covers a { flex: 0 0 80px; scroll-snap-align: start; }
+  .hero-covers img {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 4px 6px 14px rgba(0,0,0,.16);
+  }
+  .hero-free {
+    display: block;
+    background: #FBF8F2;
+    border: 1px solid var(--line);
+    padding: 14px 16px 16px;
+    text-align: center;
+  }
+  .hero-free h2,
+  .hero-free .free-heading {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .hero-free p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+}
 </style>
 </head>
 <body>
@@ -96,7 +160,10 @@ footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
 <p class="wordmark">CASA SCRIPTA</p>
 <div class="year">MMXXVI</div>
 <div class="rule"></div>
+<!-- OPTIONAL who-it's-for line (not decided): delete this ONE line to drop it; nothing else changes --><p class="hero-for">For parents of babies, toddlers and young children, and for dog and puppy owners.</p>
 <h1>Practical, research-backed guides for real-life questions.</h1>
+<div class="hero-covers"><a href="/books/alone-at-home/"><img src="/images/books/alone-at-home-final.webp" alt="Cover of Alone at Home, Dog Edition" width="80" height="120" decoding="async"></a><a href="/books/gentler-nights/"><img src="/images/books/gentler-nights-final.webp" alt="Cover of Gentler Nights" width="80" height="120" decoding="async"></a><a href="/books/tucked-in/"><img src="/images/books/tucked-in-final.webp" alt="Cover of Tucked In" width="80" height="120" decoding="async"></a><a href="/books/home-with-a-puppy/"><img src="/images/books/home-with-a-puppy-final.webp" alt="Cover of Home with a Puppy" width="80" height="120" decoding="async"></a><a href="/books/peace-at-the-table/"><img src="/images/books/peace-at-the-table-final.webp" alt="Cover of Peace at the Table" width="80" height="120" decoding="async"></a></div>
+<div class="hero-free"><p class="free-heading">Start with a free checklist.</p><p>Enter your email address to get one of 4 free printable checklists.</p><a class="btn" href="/free/">FREE PRINTABLES</a></div>
 <a class="btn" href="#books">SEE THE GUIDES</a>
 </header>
 <section id="books">
@@ -113,7 +180,7 @@ footer .cinzel{font-size:12px;color:var(--ink);display:block;margin-bottom:6px}
 <section id="free">
 <div class="label">FREE PRINTABLES</div>
 <h2>Start with a free checklist.</h2>
-<p class="lead">A one-page Safe Sleep Checklist for babies, and a Vet-First Red Flags checklist for dog owners. Both are free to download, in A4 and US Letter, with no signup.</p>
+<p class="lead">Free printable checklists from Casa Scripta: the Safe Sleep and Vet-First Red Flags checklists in A4 and US Letter, plus 2 Start-Tonight checklists in US Letter. Enter your email address to get the free checklist.</p>
 <p style="margin-top:28px"><a class="btn" href="/free/">FREE PRINTABLES</a></p>
 <div class="signup" style="margin-top:44px;padding:28px 30px;background:#FBF8F2;border:1px solid #DDD5C6;max-width:560px">
 <div class="label">EMAIL LIST</div>
